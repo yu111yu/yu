@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/dxh8unn.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Kakimoto</title>
 </head>
 
@@ -21,6 +22,16 @@
                         <li><a href="works.html#works">Works</a></li>
                         <li><a href="index.html#about">About</a></li>
                         <li class="nav-contact"><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="humberger"><span></span></div>
+                <nav class="sp-nav" style="display: none;">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li class="nav-contact"><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -49,4 +60,13 @@
     <footer>
         <p><a href="index.html">&copy; 2024 Kakimoto Portfolio</a></p>
     </footer>
+    <script>
+        $(function () {
+            // ハンバーガーメニュー
+            $('.humberger,.sp-nav a').on('click', function () {
+                $('.sp-nav').fadeToggle();
+                $('.humberger').toggleClass('open');
+            });
+        });
+    </script>
 </body>
