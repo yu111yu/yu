@@ -1,4 +1,4 @@
-@charset"utf-8";
+@charset "UTF-8";
 /* cssリセット */
 
 /*利用するタグによってこちらの内容は増やす*/
@@ -76,6 +76,9 @@ body{
       transform: translateY(0);
     }
   }
+.sp-main-img{
+    display: none;
+  }
 .header-wrap h1{
     font-size: 24px;
     color:#FF8548 ;
@@ -109,7 +112,6 @@ body{
 }
 .header-wrap .nav-contact{
     color: #fff;
-    /* width: 100px; */
     display: block;
     padding:12px 30px;
     background:  linear-gradient(to right, #FF8548 0%, #FF5A48 100%);
@@ -120,6 +122,7 @@ body{
     position: relative;
     display: block;
     overflow: hidden;
+    margin-top:-10px;
 }
 .nav-contact::before{
     position: absolute;
@@ -159,7 +162,7 @@ header p{
     background-image: url("../image/背景_グラデ.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    padding: 160px 0;
+    padding: 160px 30px;
 }
 .skills-wrap{
     display: flex;
@@ -239,7 +242,7 @@ div.about-wrap{
 /*ワークス*/
 .works{
     background: #fff;
-    padding: 160px 0;
+    padding: 160px 30px;
     margin: 0 auto;
     max-width: 1000px;
 }
@@ -273,8 +276,8 @@ div.about-wrap{
   
   .mask{
       display: block;
-      line-height: 0;行の高さを0にする
-      overflow:hidden;/*拡大してはみ出る要素を隠す*/
+      line-height: 0;
+      overflow:hidden;
   }
   
 .button{
@@ -422,7 +425,7 @@ footer p{
 }
 /*LPデザイン*/
 .LPdesign-wrap{
-    padding: 100px 0 150px 0;
+    padding-bottom: 50px;
     margin: 0 auto;
 }
 #LPdesign-all{
@@ -432,10 +435,11 @@ footer p{
     border-image-slice: 1;
     width: 130px;
     padding-bottom: 8px;
+    padding-top: 100px;
 }
 /*バナー*/
 .banner-wrap{
-    padding: 100px 0 150px 0;
+    padding: 100px 0 50px 0;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -447,6 +451,7 @@ footer p{
     border-image-slice: 1;
     width: 100px;
     padding-bottom: 8px;
+    padding-top: 100px;
 }
     /*ウェブサイト*/
 .website-wrap{
@@ -462,6 +467,7 @@ footer p{
     border-image-slice: 1;
     width: 110px;
     padding-bottom: 8px;
+    padding-top: 100px;
 }
 /*トレース*/
 .trace-wrap{
@@ -482,7 +488,6 @@ footer p{
     margin: 0 auto;
 }
 #other-all{
-    /* margin-bottom: 100px; */
     border-bottom: 2px solid;
     border-image: linear-gradient(to right, #0099CB 0%,#7570C4,#EE7E5E, #EEB50D 100%);
     border-image-slice: 1;
@@ -517,9 +522,9 @@ footer p{
     margin-bottom: 15px;
     border-color:#4C4F51;
 }
-.works .point p{
+.works .point-text{
     font-size: 16px;
-    line-height: 1.75;
+    line-height: 1.5;
 }
 .ps-sp{
     display: flex;
@@ -548,20 +553,33 @@ footer p{
     display: flex;
     gap: 50px;
     max-width: 100%;
+    padding: 0 30px;
 }
 .works .image-wrap img{
     width:50%;
     object-fit: contain;
 }
-.image-wrap-ichigo{
+.image-wrap-ichigo-ps{
     display: flex;
     gap: 50px;
     width:50%;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 30px;
 }
-.works .image-wrap-ichigo{
+.image-wrap-music-ps{
+    display: flex;
+    gap: 50px;
+    max-width: 100%;
+    padding: 0 30px;
+}
+.works .image-wrap-ichigo-ps,
+.works .image-wrap-music-ps{
 object-fit: contain;
+}
+.image-wrap-ichigo-sp,
+.image-wrap-music-sp{
+    display: none;
 }
 /*====== 9-1-1 縦線が動いてスクロールを促す =======*/
 
@@ -659,7 +677,7 @@ object-fit: contain;
     border: 1px solid;
     border-image: linear-gradient(to right, #0099CB 0%,#7570C4,#EE7E5E, #EEB50D 100%);
     border-image-slice: 1;
-    padding-bottom: 8px;
+    padding-bottom: 0;
     box-sizing: border-box;
 }
 .Form-Item-Textarea {
@@ -725,6 +743,12 @@ object-fit: contain;
 .main-visual{
     position: relative;
 }
+.pc-main-img{
+    display: none;
+}
+.sp-main-img{
+    display: block;
+}
 .main-visual img{
     width: 100%;
     /* position: relative; */
@@ -738,13 +762,14 @@ object-fit: contain;
 }
 header p{
     position: absolute;
-    left:17%;
-    font-size: 14px;
+    left:15%;
+    top: 35%;
+    font-size: 20px;
     line-height: 1.75;
     letter-spacing: 0.1em;
 }
 .first{
-    font-size: 11px;
+    font-size: 14px;
 }
 .second{
     margin-left: 95px;
@@ -779,12 +804,6 @@ h3{
 .works{
     padding:60px 30px;
 }
-/* .works-wrap{
-    display: block;
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: 90%;
-} */
 .btn-wrap{
     width: 100%;
 }
@@ -805,11 +824,14 @@ h3{
     margin-bottom: 30px;
     width: 100%;
 }
-.image-wrap-ichigo{
-    display: block;
-    width: 100%;
+.image-wrap-ichigo-ps,.image-wrap-music-ps{
+    display: none;
 }
-.image-wrap-ichigo img{
+.image-wrap-ichigo-sp,.image-wrap-music-sp{
+    display: block;
+    /* width: 100%; */
+}
+.image-wrap-ichigo-sp img,.image-wrap-music-sp img{
     margin-bottom: 30px;
 }
 .website-wrap{
@@ -821,8 +843,8 @@ h3{
 }
 .button{
     margin: 60px auto 0;
-    padding: 10px;
-    font-size: 10px;
+    padding: 10px 17px;
+    font-size: 14px;
 }
 .about{
     padding:60px;
@@ -871,7 +893,6 @@ h3{
 .Form-Item-Label {
     font-size:13px;
     font-weight: normal;
-
 }
 .Form-Item-Input{
     margin-top: 10px;
@@ -884,7 +905,7 @@ h3{
 .Form-Btn {
     margin: 60px auto 0;
     padding: 10px 50px;
-    font-size: 10px;
+    font-size: 14px;
 }
 footer p{
     font-size: 10px;
@@ -955,7 +976,7 @@ footer{
     transform: rotate(135deg);
 }
 .sp-nav{
-    background: linear-gradient(to right, #FAFCEE 0%,#F4FAEE, #F1F8F0 100%);
+    background: #fff;
     position: absolute;
     top:0;
     left:0;
@@ -970,12 +991,28 @@ footer{
 }
 .sp-nav ul li{
     color: #333;
-    text-align: center;
+    text-align: left;
     font-size: 18px;
     padding: 10px;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #0099CB 0%,#7570C4,#EE7E5E, #EEB50D 100%);
+    border-image-slice: 1;
+    padding-bottom: 8px;
 }
 .sp-nav ul li a{
 display: block;
 padding: 10px 0;
 }
+.sp-nav ul li:last-child{
+    border: none;
+    margin-top: 40px;
+}
+
+.header-wrap .nav-contact{
+    border-radius: 0;
+    padding-top:10px;
+    text-align: center;
+}
+}
+@media screen and (max-width:900px) {
 }
