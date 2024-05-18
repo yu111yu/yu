@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dxh8unn.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Kakimoto</title>
+</head>
+
+<body>
+    <div class="second-visual">
+        <header>
+            <div class="header-wrap">
+                <h1><a href="index.html">Kakimoto's<br>Portfolio</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Top</a></li>
+                        <li><a href="index.html#skills">Skills</a></li>
+                        <li><a href="works.html#works">Works</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li class="nav-contact"><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="humberger"><span></span></div>
+                <nav class="sp-nav" style="display: none;">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li class="nav-contact"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <main class="works">
+        <h2 id="works">Works</h2>
+        <div class="image-wrap-ichigo">
+            <img src="image/strawberry_works1.jpg" alt="ストロベリーフラッペ正方形バナー">
+            <img src="image/strawberry_works2.jpg" alt="ストロベリーフラッペ長方形バナー">
+        </div>
+        <div class="title">ストロベリーフラッペバナー</div>
+        <div class="data">
+            <p>目的:季節の旬のものを使った限定メニューで、常連客や新規顧客に興味を持ってもらい、集客を図る。
+            </p>
+            <p>ターゲット:甘い物、可愛い物が好きな女性向け</p>
+            <p>担当範囲:デザイン</p>
+            <p>使用ツール:Illustrator、Photoshop</p>
+            <p>サイズ:300×250、160×300</p>
+        </div>
+        <div class="point">制作のPOINT</div>
+        <p>ピンクと赤をベースにすることで女性が好む可愛らしい配色を表現しました。<br>
+            いちごを周りにたくさん配置することで、いちご感をたっぷり出し、いちご好きの方に向けた商品になるよう考えました。
+        </p>
+        <p><a href="works.html" class="button">back</a></p>
+    </main>
+    <footer>
+        <p><a href="index.html">&copy; 2024 Kakimoto Portfolio</a></p>
+    </footer>
+    <script>
+        $(function () {
+            // ハンバーガーメニュー
+            $('.humberger,.sp-nav a').on('click', function () {
+                $('.sp-nav').fadeToggle();
+                $('.humberger').toggleClass('open');
+            });
+        });
+    </script>
+</body>
