@@ -566,7 +566,7 @@ footer p{
     margin: 0 auto;
     padding: 0 30px;
 }
-.image-wrap-music-ps,image-wrap-interior-ps{
+.image-wrap-music-ps,.image-wrap-interior-ps{
     display: flex;
     gap: 50px;
     max-width: 100%;
@@ -575,12 +575,12 @@ footer p{
 }
 .works .image-wrap-ichigo-ps,
 .works .image-wrap-music-ps,
-.works image-wrap-interior-ps{
+.works .image-wrap-interior-ps{
 object-fit: contain;
 }
 .image-wrap-ichigo-sp,
 .image-wrap-music-sp,
-image-wrap-interior-sp{
+.image-wrap-interior-sp{
     display: none;
 }
 /*====== 9-1-1 縦線が動いてスクロールを促す =======*/
@@ -826,14 +826,14 @@ h3{
     margin-bottom: 30px;
     width: 100%;
 }
-.image-wrap-ichigo-ps,.image-wrap-music-ps,image-wrap-interior-ps{
+.image-wrap-ichigo-ps,.image-wrap-music-ps,.image-wrap-interior-ps{
     display: none;
 }
-.image-wrap-ichigo-sp,.image-wrap-music-sp,image-wrap-interior-sp{
+.image-wrap-ichigo-sp,.image-wrap-music-sp,.image-wrap-interior-sp{
     display: block;
     /* width: 100%; */
 }
-.image-wrap-ichigo-sp img,.image-wrap-music-sp img,image-wrap-interior-sp img{
+.image-wrap-ichigo-sp img,.image-wrap-music-sp img,.image-wrap-interior-sp img{
     margin-bottom: 30px;
 }
 .website-wrap{
